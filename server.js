@@ -28,13 +28,13 @@ console.log(`server running on port ${port} in ${process.env.NODE_ENV || "develo
 // start listening to requests on port 3000
 app.listen(port);
 
-if (process.env.NODE_ENV === 'production') {
-  var httpsOptions = {
-    key: fs.readFileSync('/etc/letsencrypt/live/sporkhub.xyz/privkey.pem'),
-    cert: fs.readFileSync('/etc/letsencrypt/live/sporkhub.xyz/fullchain.pem'),
-    ca: fs.readFileSync('/etc/letsencrypt/live/sporkhub.xyz/chain.pem')
-  };
-  https.createServer(httpsOptions, app).listen(443);
-}
+// if (process.env.NODE_ENV === 'production') {
+//   var httpsOptions = {
+//     key: fs.readFileSync('/etc/letsencrypt/live/sporkhub.xyz/privkey.pem'),
+//     cert: fs.readFileSync('/etc/letsencrypt/live/sporkhub.xyz/fullchain.pem'),
+//     ca: fs.readFileSync('/etc/letsencrypt/live/sporkhub.xyz/chain.pem')
+//   };
+//   https.createServer(httpsOptions, app).listen(443);
+// }
 
 module.exports = app;
