@@ -5,6 +5,7 @@
   "main": "script.js",
   "scripts": {
     "start": "node server.js",
+    "build": "browserify main.js -o client/js/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

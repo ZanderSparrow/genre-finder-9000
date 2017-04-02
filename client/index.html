@@ -5,20 +5,20 @@
   <link href="css/main.css" rel="stylesheet" type="text/css" media="all">
 
   <title>Genre Finder 9000</title>
-  <script src="../script.js"></script>
+  <script src="js/bundle.js"></script>
 </head>
 <body>
   <div class="container">
     <header>
       <h1>Easily find shows and movies by Genre</h1>
     </header>
-    <div id="encrypt-form">
+    <div id="search-form">
       <form>
-        <div>
-          <label for="message">Genre:</label>
-          <input id="message" type="text">
+        <div class="inline-form">
+          <label for="category">Genre:</label>
+          <input id="category" type="text" />
+          <button type="submit">Go!</button>
         </div>
-        <button type="submit">Go!</button>
       </form>
     </div>
     <div id="result"></div>
