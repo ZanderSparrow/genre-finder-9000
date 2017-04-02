@@ -23,3 +23,15 @@ body {
   padding: 0.5em;
   font-weight: bold;
 }
+
+#result {
+  padding: 20px;
+}
+
+#result a {
+  display: inline-block;
+  padding: 3em;
+  margin: 1em;
+  width: 15%;
+  background-color: #222;
+}
