@@ -27,14 +27,19 @@ fs.open('./netflix_genres.txt', 'r+', function(err, fd) {
         result += buf.slice(0, bytes).toString();
       }
 
-      // Convert to text to an array with genre: code
-      var resultArray = result.split(/[0-9](?=\s[A-Z])/g);
+      // Convert to text to arrays, one matching numbers one splitting on them
+      // Need to get only numbers with more then two digits
+      // Some titles have a digit in them!
+      var reg = /[0-9]{2,}/g;
+      var titles = result.split(reg);
+      var codes = result.match(reg);
       var resultObj = {};
-      var current;
       // Convert array to an object with genre and code
-      for(var i = 0; i < resultArray.length; i++) {
-        current = resultArray[i].split(/[:]/);
-        resultObj[current[0].trim()] = current[1].trim();
+      for(var i = 0; i < titles.length; i++) {
+        // take out the whitespace and colon
+        var title = titles[i].trim();
+        title = title.substr(0,title.length - 1); 
+        resultObj[title] = codes[i];
       }
 
       fs.writeFile('netflix_genres.json', JSON.stringify(resultObj), function(err) {
