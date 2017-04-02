@@ -7,21 +7,12 @@ html, body {
 body {
   background-color: #000;
   color: #4f4;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lucida Console", Monaco, monospace;
   text-align: center;
-  padding: 10% 0;
 }
 
 .inline-form {
   display: inline;
-}
-
-.inline-form button {
-  background-color: #4f4;
-  color: #000;
-  border-radius: 10px;
-  padding: 0.5em;
-  font-weight: bold;
 }
 
 #result {
@@ -32,6 +23,8 @@ body {
   display: inline-block;
   padding: 3em;
   margin: 1em;
-  width: 15%;
+  width: 20%;
+  color: #4f4;
   background-color: #222;
+  text-decoration: none;
 }
